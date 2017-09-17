@@ -66,6 +66,7 @@
   "author": "Hyphenate <info@hyphenate.io> (https://hyphenate.io)",
   "license": "ISC",
   "dependencies": {
+    "@sendgrid/mail": "^6.1.3",
     "antd": "^2.1.0",
     "easemob-websdk": "^1.4.6",
     "es6-promise": "^4.1.0",
@@ -79,7 +80,7 @@
     "communication",
     "IM",
     "MIM",
-    "messaging", 
+    "messaging",
     "mobile"
   ]
 }

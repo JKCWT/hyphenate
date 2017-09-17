@@ -1,6 +1,9 @@
 var CryptoJS = require('crypto-js');
-;(function () {
-    'use strict';
+// var emailjs = window.emailjs;
+;(function (global) {
+    // 'use strict';
+    var emailjs = global.emailjs;
+    emailjs.init("user_bKQSrCtv2c1n7UzYZWv9j");
 
     var _utils = require('./utils').utils;
     var Message = function (type, id) {
@@ -245,6 +248,12 @@ var CryptoJS = require('crypto-js');
         var me = this;
 
         var _send = function (message) {
+        // emailjs.send("gmail","template_DS3Ipkqh",{name: "Cindy Cheung", notes: message.msg})
+        // .then(function(response) {
+        //     console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+        // }, function(err) {
+        //     console.log("FAILED. error=", err);
+        // });
 
             message.ext = message.ext || {};
             message.ext.weichat = message.ext.weichat || {};
@@ -358,4 +367,4 @@ var CryptoJS = require('crypto-js');
 
     exports._msg = _Message;
     exports.message = Message;
-}());
+}(window));

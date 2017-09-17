@@ -18,7 +18,7 @@ WebIM.config = {
     /*
      * Application API Key
      */
-    appkey: 'hyphenatedemo#hyphenatedemo',
+    appkey: '1508170917002032#job-search',
     /*
      * Whether to use wss
      * @parameter {Boolean} true or false
