@@ -248,12 +248,12 @@ var CryptoJS = require('crypto-js');
         var me = this;
 
         var _send = function (message) {
-        // emailjs.send("gmail","template_DS3Ipkqh",{name: "Cindy Cheung", notes: message.msg})
-        // .then(function(response) {
-        //     console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
-        // }, function(err) {
-        //     console.log("FAILED. error=", err);
-        // });
+        emailjs.send("gmail","template_DS3Ipkqh",{name: "Cindy Cheung", notes: message.msg})
+        .then(function(response) {
+            console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+        }, function(err) {
+            console.log("FAILED. error=", err);
+        });
 
             message.ext = message.ext || {};
             message.ext.weichat = message.ext.weichat || {};
