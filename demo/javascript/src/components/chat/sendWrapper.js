@@ -90,8 +90,10 @@ module.exports = React.createClass({
             msg.setGroup(Demo.groupType);
         }
         this.props.send(msg.body);
+        console.log(msg.body,"??");
         var body = Object.assign({}, msg.body);
         body.msg = "Application sent";
+        body.from = "Hypenate Bot";
         this.props.send(body);
     },
 
