@@ -3,7 +3,6 @@ var UI = require('../common/webim-demo');
 var Button = UI.Button;
 var UploadShim = require('./uploadShim');
 
-var counter = 0;
 module.exports = React.createClass({
 
     getInitialState: function () {
@@ -92,14 +91,7 @@ module.exports = React.createClass({
         }
         this.props.send(msg.body);
         var body = Object.assign({}, msg.body);
-        if(counter === 0){
-            body.msg = "Please submit your application";
-            counter++;
-        }
-        else if(counter === 1){
-            body.msg = "Application sent";
-            counter++;
-        }
+        body.msg = "Application sent";
         this.props.send(body);
     },
 
