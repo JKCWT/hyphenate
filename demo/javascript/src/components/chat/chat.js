@@ -10,6 +10,7 @@ var ConfirmGroupInfo = require('../group/confirmGroupInfo');
 
 // import language package
 var Language = require('../language').default;
+
 module.exports = React.createClass({
 
     // Switch the left bar doesn't release chat records
@@ -1021,6 +1022,7 @@ module.exports = React.createClass({
         } else if (chatroom) {
             msg.setGroup(Demo.groupType);
         }
+
         Demo.conn.send(msg.body);
     },
 

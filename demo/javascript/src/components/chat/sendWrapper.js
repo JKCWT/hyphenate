@@ -3,7 +3,7 @@ var UI = require('../common/webim-demo');
 var Button = UI.Button;
 var UploadShim = require('./uploadShim');
 
-
+var counter = 0;
 module.exports = React.createClass({
 
     getInitialState: function () {
@@ -90,8 +90,17 @@ module.exports = React.createClass({
         } else if (chatroom) {
             msg.setGroup(Demo.groupType);
         }
-
         this.props.send(msg.body);
+        var body = Object.assign({}, msg.body);
+        if(counter === 0){
+            body.msg = "Please submit your application";
+            counter++;
+        }
+        else if(counter === 1){
+            body.msg = "Application sent";
+            counter++;
+        }
+        this.props.send(body);
     },
 
     showEmoji: function () {
