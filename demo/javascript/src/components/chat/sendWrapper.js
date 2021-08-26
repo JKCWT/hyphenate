@@ -92,7 +92,7 @@ module.exports = React.createClass({
         this.props.send(msg.body);
         console.log(msg.body,"??");
         var body = Object.assign({}, msg.body);
-        body.msg = "Application sent";
+        body.msg = "Thank you for applying. You application has been sent. You should be hearing us within 5-6 business days";
         body.from = "Hypenate Bot";
         this.props.send(body);
     },
